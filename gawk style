@@ -1,0 +1,7 @@
+#### 2.2 Set up Environment variables
+```
+export ML_INSTANCE=`bx service key-show <your_Instance_Name> <your_Instance_Key_Name> | gawk '/instance_id/ {gsub("\"","");print $2}' 
+export ML_USERNAME=`bx service key-show <your_Instance_Name>  <your_Instance_Key_Name> | gawk '/username/ {gsub("\"","");print $2}' 
+export ML_PASSWORD=`bx service key-show <your_Instance_Name>  <your_Instance_Key_Name>| gawk '/password/ {gsub("\"","");print $2}' 
+export ML_ENV=`bx service key-show <your_Instance_Name> <your_Instance_Key_Name>| gawk '/url/ {gsub("\"","");print $2}'
+```
